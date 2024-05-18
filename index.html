@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/fav/favicon-16x16.png">
+    <link rel="manifest" href="/img/fav/site.webmanifest">
+    <link rel="mask-icon" href="/img/fav/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/img/fav/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/img/fav/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LayerZero Airdrop Sybil Checker | by Gas.zip</title>
+    <meta name="description" content="Check a list of addressees against the first round of detected sybil attackers addressees aggregated through self-reporting and investigations by LayerZero, Chaos Labs, and Nansen. The checker is open source, you can bulk check a list of addressees offline and securely.">
+    <meta name="keywords" content="LayerZero, Airdrop, Sybil Checker, Gas.zip, Chaos Labs, Nansen, Ethereum, Sybil Attacks, Open Source, Bulk Check, Offline, Secure">
+    <meta name="author" content="Gas.zip">
+    <meta property="og:title" content="LayerZero Airdrop Sybil Checker | by Gas.zip">
+    <meta property="og:description" content="Check a list of addressees against the first round of detected sybil attackers addressees aggregated through self-reporting and investigations by LayerZero, Chaos Labs, and Nansen. The checker is open source, you can bulk check a list of addressees offline and securely.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.sybil.rip">
+    <meta property="og:image" content="https://pbs.twimg.com/profile_images/1779646801605242880/FrFssPAQ_400x400.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LayerZero Airdrop Sybil Checker | by Gas.zip">
+    <meta name="twitter:description" content="Check a list of addressees against the first round of detected sybil attackers addressees aggregated through self-reporting and investigations by LayerZero, Chaos Labs, and Nansen. The checker is open source, you can bulk check a list of addressees offline and securely.">
+    <meta name="twitter:image" content="https://pbs.twimg.com/profile_images/1779646801605242880/FrFssPAQ_400x400.jpg">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F4ZS1MJNPY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'G-F4ZS1MJNPY');
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <center>
+        <h1>LayerZero Sybil Checker</h1>
+        <span id="summary">
+        <p> Total Addresses Identified: <b><a href="https://x.com/LayerZero_Labs/status/1791622471965163597">803,093</a></b></p>
+        <textarea id="ethAddresses" placeholder="Enter one address per line"></textarea>
+      </center>
+      <br>
+      <center><button onclick="checkAddress()">Check Addresses</button></center>
+      <br><br>
+      <span id="summary">
+        <p> by <a href="https://twitter.com/gasdotzip">@gasdotzip</a></p>
+        <p><a href="https://github.com/tomkysar/sybil.rip">view source</a> </p>
+      </span>
+    </div>
+    <div class="overlay" id="overlay" onclick="closeResult()"></div>
+    <div class="result" id="resultBox">
+      <center>
+        <h2>Addresses Detected:</h2>
+      </center>
+      <div id="resultContent"></div>
+      <center><button id="close" onclick="closeResult()">Close</button></center>
+    </div>
+  </body>
+</html>
